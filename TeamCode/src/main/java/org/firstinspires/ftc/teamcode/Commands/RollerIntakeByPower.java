@@ -2,15 +2,14 @@ package org.firstinspires.ftc.teamcode.Commands;
 
 import com.arcrobotics.ftclib.command.CommandBase;
 
-import org.firstinspires.ftc.teamcode.Libraries.MMLib.Examples.Subsystems.Shooter;
 import org.firstinspires.ftc.teamcode.MMRobot;
-import org.firstinspires.ftc.teamcode.SubSystems.Intake;
+import org.firstinspires.ftc.teamcode.SubSystems.RollerIntake;
 
-public class IntakeByPower extends CommandBase {
-    Intake intake;
+public class RollerIntakeByPower extends CommandBase {
+    RollerIntake intake = MMRobot.getInstance().mmSystems.intake;
     double power;
 
-    public IntakeByPower(double power){
+    public RollerIntakeByPower(double power){
         this.power = power;
         this.addRequirements(intake);
     }

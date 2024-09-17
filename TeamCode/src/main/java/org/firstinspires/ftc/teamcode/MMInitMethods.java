@@ -31,6 +31,9 @@ public class MMInitMethods {
     public static void initShooterPID() {
         mmSystems.shooterPID = new ShooterPID();
     }
+    public static void initLinearIntake() {
+        mmSystems.shooterPID = new ShooterPID();
+    }
 
     public static void initExampleElevator() {
         mmSystems.exampleElevator = new ExampleElevator();

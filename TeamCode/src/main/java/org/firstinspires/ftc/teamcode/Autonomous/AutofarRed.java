@@ -14,8 +14,8 @@ import org.firstinspires.ftc.teamcode.Libraries.RoadRunner.MecanumDrive;
 
 
 @Config
-@Autonomous(name = "AutocloseRed", group = "Autonomous")
-public class AutocloseRed extends CommandOpMode {
+@Autonomous(name = "AutofarRed", group = "Autonomous")
+public class AutofarRed extends CommandOpMode {
 
     Action traj;
 
@@ -25,16 +25,16 @@ public class AutocloseRed extends CommandOpMode {
     public void initialize() {
 
 
-        Pose2d initialPose = new Pose2d(-18.8, -63.75, Math.toRadians(90.00))   ;
+        Pose2d initialPose = new Pose2d(14.83, -16.13, Math.toRadians(90.00));
         MecanumDrive drive = new MecanumDrive(hardwareMap, initialPose);
 
-         traj = drive.actionBuilder(initialPose)
+        traj = drive.actionBuilder(initialPose)
 
                 .turn(Math.toRadians(90))
-                .lineToX(-50.93)
-                .setTangent(Math.toRadians(180))
-                .splineToConstantHeading(new Vector2d(-59.39 , -38.12) , Math.toRadians(90.00))
-                 .splineToConstantHeading(new Vector2d(-58.25 , -56.09), Math.toRadians(225.00))
+                .splineToConstantHeading(new Vector2d(-58.85 , -38.37),Math.toRadians(90.00))
+                .splineToConstantHeading(new Vector2d(-58.55 , -60.99),Math.toRadians(90.00))
+
+
                 .build();
 
     }
